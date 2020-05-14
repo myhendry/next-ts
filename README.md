@@ -1,37 +1,61 @@
-# Custom server with TypeScript + Nodemon example
+**LEARN**
 
-The example shows how you can use [TypeScript](https://typescriptlang.com) on both the server and the client while using [Nodemon](https://nodemon.io/) to live reload the server code without affecting the Next.js universal code.
+- [ ] Rust
 
-Server entry point is `server/index.ts` in development and `dist/index.js` in production.
-The second directory should be added to `.gitignore`.
+**NEXT**
 
-## How to use
+- [x] typescript
+- [x] semantic-ui-react
+- [x] integrate ts-server
+- [x] debug ssr
+- [ ] set up typegql
+- [ ] auth ssr
+- [ ] blockchain
 
-### Using `create-next-app`
+**TS - PG**
 
-Execute [`create-next-app`](https://github.com/zeit/next.js/tree/canary/packages/create-next-app) with [npm](https://docs.npmjs.com/cli/init) or [Yarn](https://yarnpkg.com/lang/en/docs/cli/create/) to bootstrap the example:
+- [x] field resolvers - for typeorm + pg, use Query builder instead
+- [ ] favorites
+- [ ] bookmarks
+- [x] delete cascade - cascade delete eg. delete user, place { onDelete: 'CASCADE' } on relationships
+- [x] class validators
+- [ ] refresh token
+- [ ] oAuth
+- [ ] data loaders
+- [x] basic auth
+- [x] subscription
+- [x] array field resolvers
+- [x] user - posts & comments
 
-```bash
-npm init next-app --example custom-server-typescript custom-server-typescript-app
-# or
-yarn create next-app --example custom-server-typescript custom-server-typescript-app
-```
+**JS - Mongo**
 
-### Download manually
+- [x] basic auth
+- [x] oAuth
+- [x] subscription
+- [x] array field resolvers
+- [x] user - posts & comments
+- [x] virtual
+- [x] yup
+- [x] field resolvers
+- [1] favorites
+- [1] delete cascade
 
-Download the example:
+---
 
-```bash
-curl https://codeload.github.com/zeit/next.js/tar.gz/canary | tar -xz --strip=2 next.js-canary/examples/custom-server-typescript
-cd custom-server-typescript
-```
+**KIV**
 
-Install it and run:
+- [ ] oAuth
+- [x] typeorm - mongoose
+- [ ] nest
+- [ ] aws
+- [x] markdown editor (react-markdown)
 
-```bash
-npm install
-npm run dev
-# or
-yarn
-yarn dev
-```
+---
+
+**References**
+
+> Nest Example
+> https://github.com/kelvin-mai/nest-ideas-api
+
+> MERNG Classed
+> https://www.youtube.com/watch?v=C_2Eo72cL2k&t=267s

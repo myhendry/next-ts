@@ -7,8 +7,10 @@
     "start": "cross-env NODE_ENV=production node dist/index.js"
   },
   "dependencies": {
+    "apollo-server-micro": "^2.13.1",
     "cross-env": "^5.2.0",
     "express": "^4.17.1",
+    "graphql": "^15.0.0",
     "next": "latest",
     "react": "^16.8.4",
     "react-dom": "^16.8.4",

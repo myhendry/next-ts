@@ -8,6 +8,7 @@
 - [x] semantic-ui-react
 - [x] integrate ts-server
 - [x] debug ssr
+- [ ] set up graphql
 - [ ] set up typegql
 - [ ] auth ssr
 - [ ] blockchain

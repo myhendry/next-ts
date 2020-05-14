@@ -1,8 +1,8 @@
-const path = require("path");
+// const path = require("path");
 
 module.exports = {
   webpack(config) {
-    config.resolve.alias["@"] = path.resolve(__dirname);
+    // config.resolve.alias["@"] = path.resolve(__dirname);
 
     config.module.rules.push({
       test: /\.(png|svg)$/,

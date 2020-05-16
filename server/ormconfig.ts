@@ -1,0 +1,36 @@
+module.exports = [
+  {
+    name: "default",
+    type: "postgres",
+    url: process.env.DATABASE_URL,
+    synchronize: false,
+    logging: false,
+    entities: ["dist/entities/*.*{.ts,.js}"],
+    migrations: ["dist/database/migrations/**/*{.ts,.js}"],
+    subscribers: ["dist/database/subscribers/**/*{.ts,.js}"],
+    cli: {
+      entitiesDir: "dist/entities",
+      migrationsDir: "dist/database/migrations",
+      subscribersDir: "dist/database/subscribers",
+    },
+  },
+  {
+    name: "development",
+    type: "postgres",
+    host: "localhost",
+    port: 5432,
+    username: "postgres",
+    password: "postgres",
+    database: "lab",
+    synchronize: true,
+    logging: true,
+    entities: ["src/entity/**/*{.ts,.js}"],
+    migrations: ["src/migration/**/*{.ts,.js}"],
+    subscribers: ["src/subscriber/**/*{.ts,.js}"],
+    cli: {
+      entitiesDir: "src/entity",
+      migrationsDir: "src/migration",
+      subscribersDir: "src/subscriber",
+    },
+  },
+];

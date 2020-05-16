@@ -9,8 +9,11 @@
 - [x] integrate ts-server
 - [x] debug ssr
 - [x] set up graphql
-- [ ] set up typegql
-- [ ] auth ssr
+- [x] set up typegql
+- [x] set up client-side apollo query
+- [x] set up graphql-code-generator
+- [ ] set up ssr apollo query
+- [ ] auth ssr with cookies
 - [ ] blockchain
 
 **TS - PG**
@@ -20,9 +23,9 @@
 - [ ] bookmarks
 - [x] delete cascade - cascade delete eg. delete user, place { onDelete: 'CASCADE' } on relationships
 - [x] class validators
+- [ ] data loaders
 - [ ] refresh token
 - [ ] oAuth
-- [ ] data loaders
 - [x] basic auth
 - [x] subscription
 - [x] array field resolvers

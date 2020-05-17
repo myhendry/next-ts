@@ -1,7 +1,7 @@
 import App from "next/app";
 import { Container } from "semantic-ui-react";
 
-import { Header } from "../components/Header";
+import Header from "../components/Header";
 import "semantic-ui-css/semantic.min.css";
 import "./styles.css";
 

@@ -1,13 +1,18 @@
-import Router from "next/router";
+import { useEffect } from "react";
+import { useRouter } from "next/router";
 
-export default (context: any, target: string) => {
-  if (context.res) {
-    // server
-    // 303: "See other"
-    context.res.writeHead(303, { Location: target });
-    context.res.end();
-  } else {
-    // In the browser, we just pretend like this never even happened ;)
-    Router.replace(target);
-  }
+interface IRedirect {
+  to: string;
+}
+
+const Redirect = ({ to }: IRedirect) => {
+  const router = useRouter();
+
+  useEffect(() => {
+    router.push({ pathname: to });
+  }, []);
+
+  return null;
 };
+
+export default Redirect;

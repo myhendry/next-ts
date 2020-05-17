@@ -1,12 +1,12 @@
 import React from "react";
 import { NextPage } from "next";
 import { useQuery } from "@apollo/react-hooks";
-// import { getDataFromTree } from "@apollo/react-ssr";
 import useSSR from "use-ssr";
 
-import { withApollo } from "../lib/apollo";
+import withApollo from "../lib//withApollo";
 import { TEST_TODOS } from "../graphql/queries";
-
+import { getDataFromTree } from "@apollo/react-ssr";
+import withAuth from "../lib/withAuth";
 interface IProps {
   testingData?: string;
 }
@@ -41,4 +41,4 @@ const Portfolio: NextPage<IProps> = () => {
   );
 };
 
-export default withApollo({ ssr: true })(Portfolio);
+export default withApollo(withAuth(Portfolio), { getDataFromTree });

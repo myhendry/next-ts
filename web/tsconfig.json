@@ -3,7 +3,7 @@
     "target": "esnext",
     "module": "esnext",
     "jsx": "preserve",
-    "lib": ["dom", "es2018"],
+    "lib": ["dom", "es2018", "esnext.asynciterable"],
     "baseUrl": ".",
     "moduleResolution": "node",
     "strict": true,

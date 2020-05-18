@@ -7,7 +7,6 @@ import { GET_ME_QUERY } from "../graphql/queries";
 import withApollo from "../lib/withApollo";
 
 const Header = () => {
-  //todo to review
   const [activeItem, setActiveItem] = useState("home");
   const [getMe, { data, error }] = useLazyQuery(GET_ME_QUERY);
   const [hasResponse, setHasResponse] = useState(false);
@@ -50,13 +49,31 @@ const Header = () => {
         <>
           {user && (
             <>
-              <Link href="/portfolio" passHref>
+              <Link href="/todos" passHref>
                 <Menu.Item
-                  name="portfolio"
-                  active={activeItem === "portfolio"}
+                  name="todos"
+                  active={activeItem === "todos"}
                   onClick={handleItemClick}
                 >
-                  Portfolio
+                  Todos - S
+                </Menu.Item>
+              </Link>
+              <Link href="/todos/client" passHref>
+                <Menu.Item
+                  name="todos-client"
+                  active={activeItem === "todos-client"}
+                  onClick={handleItemClick}
+                >
+                  Todos - C
+                </Menu.Item>
+              </Link>
+              <Link href="/secret" passHref>
+                <Menu.Item
+                  name="secret"
+                  active={activeItem === "secret"}
+                  onClick={handleItemClick}
+                >
+                  Secret
                 </Menu.Item>
               </Link>
               <Link href="/logout" passHref>

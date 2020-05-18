@@ -1,18 +1,12 @@
-import App from "next/app";
+import App, { AppContext } from "next/app";
 import { Container } from "semantic-ui-react";
 
-import Header from "../components/Header";
 import "semantic-ui-css/semantic.min.css";
 import "./styles.css";
 
 const MyApp = ({ Component, pageProps }: any) => {
-  // debugger;
-  {
-    pageProps.appData;
-  }
   return (
     <>
-      <Header />
       <Container>
         <Component {...pageProps} />
       </Container>
@@ -20,7 +14,7 @@ const MyApp = ({ Component, pageProps }: any) => {
   );
 };
 
-MyApp.getInitialProps = async (context: any) => {
+MyApp.getInitialProps = async (context: AppContext) => {
   console.log("GET INITIAL PROPS _APP");
   const initialProps =
     App.getInitialProps && (await App.getInitialProps(context));

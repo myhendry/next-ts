@@ -5,6 +5,7 @@ import { useRouter } from "next/router";
 import { useLoginMutation } from "__generated__/graphql";
 import withApollo from "../lib/withApollo";
 import { GET_ME_QUERY } from "../graphql/queries";
+import Layout from "../components/Layout";
 
 type LoginType = {
   email: string;
@@ -34,38 +35,40 @@ const Login = () => {
       },
     });
 
-    res.data && res.data.login && router.push("/portfolio");
+    res.data && res.data.login && router.push("/todos");
   };
 
   return (
-    <form onSubmit={handleSubmit(onSubmit)}>
-      <div className="field">
-        <label htmlFor="email">Email</label>
-        <input
-          type="email"
-          id="email"
-          name="email"
-          ref={register({ required: true })}
-        />
-        {errors.email && errors.email.type === "required" && (
-          <div className="error">Your must enter your email.</div>
-        )}
-      </div>
-      <div className="field">
-        <label htmlFor="name">Password</label>
-        <input
-          type="password"
-          id="password"
-          name="password"
-          ref={register({ required: true })}
-        />
-        {errors.password && errors.password.type === "required" && (
-          <div className="error">Your must enter your password.</div>
-        )}
-      </div>
-      {error && <p>{errorMessage(error)}</p>}
-      {loading ? <p>Loading...</p> : <button type="submit">Save</button>}
-    </form>
+    <Layout>
+      <form onSubmit={handleSubmit(onSubmit)}>
+        <div className="field">
+          <label htmlFor="email">Email</label>
+          <input
+            type="email"
+            id="email"
+            name="email"
+            ref={register({ required: true })}
+          />
+          {errors.email && errors.email.type === "required" && (
+            <div className="error">Your must enter your email.</div>
+          )}
+        </div>
+        <div className="field">
+          <label htmlFor="name">Password</label>
+          <input
+            type="password"
+            id="password"
+            name="password"
+            ref={register({ required: true })}
+          />
+          {errors.password && errors.password.type === "required" && (
+            <div className="error">Your must enter your password.</div>
+          )}
+        </div>
+        {error && <p>{errorMessage(error)}</p>}
+        {loading ? <p>Loading...</p> : <button type="submit">Save</button>}
+      </form>
+    </Layout>
   );
 };
 

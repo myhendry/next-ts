@@ -54,4 +54,7 @@ Todos.getInitialProps = (ctx): any => {
   return {};
 };
 
+//! Authentication on CLIENT SIDE ONLY and No Authentication on Server Side, Data Rendered on SERVER SIDE
 export default withApollo(withAuth(Todos), { getDataFromTree });
+//! Below Example is Proper Authentication on BOTH SERVER & CLIENT SIDES - See todos/index Data Rendered on SERVER SIDE
+// export default withApollo(withAuth(Todos, { ssr: true }), { getDataFromTree });

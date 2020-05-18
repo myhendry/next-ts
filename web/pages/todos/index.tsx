@@ -49,9 +49,9 @@ const Todos: NextPage<IProps> = () => {
   );
 };
 
-Todos.getInitialProps = (ctx): any => {
-  console.log("getInitialProps", ctx);
+Todos.getInitialProps = (_ctx): any => {
   return {};
 };
 
-export default withApollo(withAuth(Todos), { getDataFromTree });
+//! Below Example is Proper Authentication on BOTH SERVER & CLIENT SIDES - See todos/index. Data Rendered on SERVER SIDE
+export default withApollo(withAuth(Todos, { ssr: true }), { getDataFromTree });

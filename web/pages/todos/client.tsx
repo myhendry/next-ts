@@ -41,4 +41,5 @@ const Todos: NextPage<IProps> = () => {
   );
 };
 
+//! Authentication on CLIENT SIDE ONLY and No Authentication on Server Side. Data Rendered on CLIENT SIDE ONLY
 export default withApollo(withAuth(Todos));
